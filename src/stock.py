@@ -19,7 +19,9 @@ class Stock:
             parameter = {arg: kwargs.get(arg)}
             params.update(parameter)
         
-        return requests.get(url, params=params).json()
+        
+        res = requests.get(url, params=params)
+        return res.json()
 
     #real time quote
     def get_quote(self):
@@ -29,4 +31,5 @@ class Stock:
         params.update({'apikey': self.key})
 
         
-        return requests.get(url, params=params).json()
+        res = requests.get(url, params=params)
+        return res.json()
