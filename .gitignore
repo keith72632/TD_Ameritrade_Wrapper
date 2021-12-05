@@ -1,3 +1,4 @@
 .env
 env.bat
 env.sh
+src/config.py
